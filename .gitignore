@@ -57,7 +57,8 @@ coverage.xml
 *.mo
 *.pot
 
-
+# Test directory
+test/
 
 # PyBuilder
 target/
