@@ -9,8 +9,7 @@ import jinja2
 
 def usage_args():
     parser = argparse.ArgumentParser(
-                        description='Based on the document template (docx) and data specified in sheet (xlsx) produces document of series.',
-                        exit_on_error=False
+                        description='Based on the document template (docx) and data specified in sheet (xlsx) produces document of series.'
                         )
     parser.add_argument('-w', '--workbook',
                         dest='workbook',
