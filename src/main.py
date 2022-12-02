@@ -45,7 +45,7 @@ if __name__ == "__main__":
         print(f"File {xlsx_file} not found.")
         sys.exit(1)
     except Exception as err:
-        print(f"Unexpected {err=}, {type(err)=}")
+        print(f"Unexpected {err}, {type(err)}")
         sys.exit(2)
 
     if args.sheet_name == '':
@@ -80,7 +80,7 @@ if __name__ == "__main__":
             print(f"{err}")
             sys.exit(2)
         except Exception as err:
-            print(f"{err}, {type(err)=}")
+            print(f"{err}, {type(err)}")
             sys.exit(2)
 
     else:
