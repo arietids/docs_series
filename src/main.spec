@@ -27,7 +27,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='main',
+    name='docs_series',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
