@@ -47,28 +47,22 @@ if __name__ == "__main__":
         print(f"Unexpected {err}, {type(err)}")
         sys.exit(2)
 
-    if args.sheet_name == '':
-        sheet = workbook.active
-    else:
-        try:
-            sheet = workbook[args.sheet_name]
-        except Exception as err:
-            print(f"{err}")
-            sys.exit(1)
+    j = {}
     
-    data = []
+    for sheet in workbook:
+        
+        data = []
 
-    for i, row in enumerate(sheet.iter_rows(values_only=True)):
-        if i == 0:
-            header = row
-        else:
-            rowdata = {header[i] : row[i] for i, _ in enumerate(row)}
-            data.append(rowdata)
+        for i, row in enumerate(sheet.iter_rows(values_only=True)):
+            if i == 0:
+                header = row
+            else:
+                rowdata = {header[i] : row[i] for i, _ in enumerate(row)}
+                data.append(rowdata)
 
-    j = {
-        "data": data,
-        "page_break": "\f"
-    }
+        j[sheet.title] = data
+
+    j["page_break"] = "\f"
 
     if args.template != None and args.template != '':
         try:
