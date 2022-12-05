@@ -7,6 +7,8 @@ import json
 from docxtpl import DocxTemplate
 import jinja2
 
+__VERSION__ = '0.1'
+
 def usage_args():
     parser = argparse.ArgumentParser(
                         description='Based on the document template (docx) and data specified in sheet (xlsx) produces document of series.'
@@ -25,6 +27,9 @@ def usage_args():
                         action='store',
                         default='out.docx',
                         help='Name of document file to be generated. [docx file] Optional. Default: out.docx')
+    parser.add_argument('--version',
+                        action='version',
+                        version='%(prog)s {version}'.format(version=__VERSION__))
 
     return parser.parse_args()
 
