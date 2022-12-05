@@ -17,13 +17,16 @@ def usage_args():
                         dest='workbook',
                         required=True,
                         type=Path,
+                        metavar='workbook.xlsx',
                         help='Name of workbook file with data. [xlsx file]')
     parser.add_argument('-t', '--template',
                         dest='template', 
+                        metavar='template.docx',
                         help='Name of template file. [docx file]. If not specified json output to stdout.')
     parser.add_argument('-o', '--outfile',
                         dest='outfile',
                         default='out.docx',
+                        metavar='out.docx',
                         help='Name of document file to be generated. [docx file] Optional. Default: out.docx')
     parser.add_argument('--version',
                         action='version',
