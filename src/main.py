@@ -16,11 +16,6 @@ def usage_args():
                         required=True,
                         type=Path,
                         help='Name of workbook file with data. [xlsx file]')
-    parser.add_argument('-s', '--sheet-name',
-                        dest='sheet_name', 
-                        action='store',
-                        default='',
-                        help='Name of sheet. Optional. Default: active is taken.')
     parser.add_argument('-t', '--template',
                         dest='template', 
                         action='store',
