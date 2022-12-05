@@ -65,8 +65,6 @@ if __name__ == "__main__":
 
         j[sheet.title] = data
 
-    j["page_break"] = "\f"
-
     if args.template != None and args.template != '':
         try:
             docx_tpl = DocxTemplate(args.template)
