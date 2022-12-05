@@ -20,11 +20,9 @@ def usage_args():
                         help='Name of workbook file with data. [xlsx file]')
     parser.add_argument('-t', '--template',
                         dest='template', 
-                        action='store',
                         help='Name of template file. [docx file]. If not specified json output to stdout.')
     parser.add_argument('-o', '--outfile',
                         dest='outfile',
-                        action='store',
                         default='out.docx',
                         help='Name of document file to be generated. [docx file] Optional. Default: out.docx')
     parser.add_argument('--version',
